@@ -24,9 +24,6 @@ jobs:
           distribution: temurin
           java-version: '17'
 
-      - name: Setup Android SDK
-        uses: android-actions/setup-android@v3
-
       - name: Install Android SDK packages
         run: sdkmanager "platforms;android-37" "build-tools;37.0.0" "platform-tools" "ndk;27.1.12297006"
 
@@ -44,3 +41,4 @@ jobs:
         with:
           name: soodyar-release-apk
           path: android/app/build/outputs/apk/release/app-release.apk
+
